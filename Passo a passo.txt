@@ -1,0 +1,38 @@
+308 - Criação do Projeto
+
+- Em File, New , Spring Starter Project
+- Colocar nome do projeto, versao do java, tipo(maven) e etc e avançar
+- Proxima janela é para escolher as dependencias basicas do projeto
+- Escolher Spring Web e avançar
+
+- Salvar o Projeto no GitHub
+- Abrir um terminal do GitHub na pasta local do projeto
+- Configurar o usuario e email localmente.
+git config --global user.name "Eduardo B"
+git config --global user.email "eduardo.ads1814@gmail.com"
+git add .
+git commit -m "Project Created"
+- Agora salvar o projeto no GitHub
+- Criar o projeto sem GitIgnore
+- Copiar o git remote e colar no terminarl
+- Fazer o git push
+
+
+309 - Criar a Entidade User (primeira do projeto) 
+      Criar também nosso primeiro Resource (recurso WEB correspondente a Entidade User), este recurso vai disponibilzar dois end points para recuperarmos os usuarios cadastrados e também o usuario informando ID dele.
+
+- Criar a Entidade User
+	Implementar os atributos básicos
+	Implementar as associações (ainda é a primeira entidade, entao nao tem)
+	Construtores (é obrigado colocar o contrutor vazio)
+	Getters & Setters
+	Implementar o hashCode & equals (por padrão, estamos colocando apenas o Id)
+	Serializible (serve para quando vc quer que seus objetos possao sem transformados em cadeias de Bytes. Serve para que o objetro trafegue na rede, possa ser gravado em arquivo e assim por diante)
+
+- Agora para testar se o nosso Rest da nossa aplicação Spring Boot está funcionando, vamos criar um Recurso básico baseado na nossa Clase User.
+Para fazer isso, criar uma Classe chamada UserResource (esta classe vai disponibizar o recurso web correspondente a entidade User)	
+Para falar que está classe é um recurso web que é implementado por um controlador Rest, precisa coolocar uma anotation no início. Depois dar um nome para o recurso.
+
+- Criar um método para testar.
+- Testar no navegador atraves do localhost:8080/users
+- Fazer o git push
