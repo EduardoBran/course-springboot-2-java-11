@@ -3,9 +3,17 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity //anotations do JPA para instruir como que ele vai converter os objetos para o modelo relacional.
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //dizendo para o JPA que ela é auto incrementável
 	private Long id;
 	private String name;
 	private String email;

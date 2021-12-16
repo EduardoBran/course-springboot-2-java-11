@@ -36,3 +36,17 @@ Para falar que está classe é um recurso web que é implementado por um controlado
 - Criar um método para testar.
 - Testar no navegador atraves do localhost:8080/users
 - Fazer o git push
+
+310 - Configuração do nosso Banco de Teste. Nosso banco de teste será o H2 que é muito utilizado em java para fazer testes na aplicação. É um banco de dados em memória.
+
+- Implementar o banco no projeto.
+- Criar um profile de testes que é um perfil do nosso projeto específico para fazer testes. (pode criar outros perfis de teste como desenvolvimento)
+
+- Incluir no projeto as dependencias de JPA e H2    
+- Copiar código das dependencias no material de apoio e colocar dento do arquivo pom.xml dentro de <dependecies></dependencies> . Com isso incluimos no projeto todas as bibliotecas do JPA e do H2.
+- Configurar o arquivo application.properties que está em src/main/resources (copiar os codigos do material de apoio e colar la).   	
+- Criar o arquivo application-test.properties em src/main/resources e o conteudo desse arquivo vai ter as configurações do nosso banco de dados H2 (banco de dados do perfil de teste). Pegar as configurações no material de apoio.
+
+- Na nossa entidade (que por enquanto é apenas a clase User) , vamos colocar algumas anotations do JPA para instruir como que ele vai converter os objetos para o modelo relacional.
+
+- No navegador, digitar http://localhost:8080/h2-console e conectar
