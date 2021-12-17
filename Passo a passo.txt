@@ -50,3 +50,9 @@ Para falar que está classe é um recurso web que é implementado por um controlado
 - Na nossa entidade (que por enquanto é apenas a clase User) , vamos colocar algumas anotations do JPA para instruir como que ele vai converter os objetos para o modelo relacional.
 
 - No navegador, digitar http://localhost:8080/h2-console e conectar
+
+Aula 311 - Implementar nosso primeiro repositorio utilizando o JPA repository, trabalhar com injeção de dependência automática feita pelo conteiner do framework e fazer nossa primeira instaciação do banco de dados (database seeding), vamos inserir alguns dados automaticamente no banco de dados.
+
+- Criar o JPA repository. Criar a interface UserRepository que vai ser o responsável por operações com a entidade User. Para criar o UserRepository reutilizando o JPA repostiroy basta fazer ele estender o JPARepository passando o tipo da entidade que vc vai acessar mais o tipo da chave.
+
+- Criar uma classe de configuração TestConfig para o perfil de teste que vai ser uma classe auxiliar que irá fazer algumas configurações na minha aplicação.
