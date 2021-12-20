@@ -55,4 +55,20 @@ Aula 311 - Implementar nosso primeiro repositorio utilizando o JPA repository, t
 
 - Criar o JPA repository. Criar a interface UserRepository que vai ser o responsável por operações com a entidade User. Para criar o UserRepository reutilizando o JPA repostiroy basta fazer ele estender o JPARepository passando o tipo da entidade que vc vai acessar mais o tipo da chave.
 
-- Criar uma classe de configuração TestConfig para o perfil de teste que vai ser uma classe auxiliar que irá fazer algumas configurações na minha aplicação.
+- Criar uma classe de configuração TestConfig para o perfil de teste que vai ser uma classe auxiliar que irá fazer algumas configurações na aplicação.
+
+Aula 312 - Vamos implementar a nossa camada de serviço e aprender sobre Registro de Componentes (existente em todo framework que faz injeção de dependência)
+
+- Criar a classe UserService (para assim fazer com que o Controlador SÓ dependa de serviço e o serviço SÓ dependa do repository) com duas operações básicas, que é a operação para buscar todos os usuários e a operação para buscar um usuário por ID. Para fazer isso a classe UserService precisa de uma dependência para UserRepository.
+
+- Na classe UserResource (que é o controlador rest), criar a dependência para UserService e atualizar a implementação do findAll(). 
+
+- Para a dependencia de UserService funcionar eu preciso registra-la como um componente. Colocar as anotations na classe.
+
+- Na classe UserRepository não precisa colocar a anotation @Repository pois a mesma ja está herdando da classe extendida JpaRepository
+
+- Abrir o PostMan, ir em My Workspace, abrir uma nova aba, colocar o metodo GET e digitar o endereço http://localhost:8080/users/
+
+- Agora fazer o end point para buscar o usuario por ID
+- Na classe UserService colocar a operação necessaria para isso.
+- Na classe UserResource implementar o end point para buscar usuario por ID.
