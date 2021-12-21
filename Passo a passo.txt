@@ -106,3 +106,9 @@ Aula 314 - Vamos falar da associação para muitos, lazy loading (carregamento tar
 - Acrescentar anotation JasonIgnore na classe User
 
 - Na classe Order, para garantir que o meu instant seja mostrado no Jason no formato de String do ISO 8601, colocar a @anotation @JsonFormat pra formatar o meu Json
+
+Aula 315 - Vamos fazer um OrderStatus do tipo enumerado.
+
+- Criar o enum OrderStatus
+- Na instaciação a gente colocou o OrderStatus.PAID e assim por diante. Por padrão o java enumerao cada um dos tipos enumerados, se um programador simplesmente adicionar um ENUM no meio, ele quebra os valores banco de dados.
+- Por isso temos que atribuir um valor numérico para cada tipo enumerado.
