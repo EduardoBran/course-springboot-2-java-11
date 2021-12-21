@@ -24,7 +24,7 @@ git commit -m "Project Created"
 - Criar a Entidade User
 	Implementar os atributos básicos
 	Implementar as associações (ainda é a primeira entidade, entao nao tem)
-	Construtores (é obrigado colocar o contrutor vazio)
+	Construtores (é obrigado colocar o contrutor vazio) e instancia-las.
 	Getters & Setters
 	Implementar o hashCode & equals (por padrão, estamos colocando apenas o Id)
 	Serializible (serve para quando vc quer que seus objetos possao sem transformados em cadeias de Bytes. Serve para que o objetro trafegue na rede, possa ser gravado em arquivo e assim por diante)
@@ -72,3 +72,21 @@ Aula 312 - Vamos implementar a nossa camada de serviço e aprender sobre Registro
 - Agora fazer o end point para buscar o usuario por ID
 - Na classe UserService colocar a operação necessaria para isso.
 - Na classe UserResource implementar o end point para buscar usuario por ID.
+
+Aula 313 - Trabalhar com a classe de Pedido (Order), classe Instant (para representar um instante) e o padrão ISO 8601 (padrão para representar datas na forma de texto).
+
+- A Classe Order é associada diretamente a clase User (um pedido tem usuario associado a ele e um User pode ter varios pedidos associados a ele). Nosso pedido vai ter o Id e moment (instante em que foi pedido).
+
+- Criar a entidade Pedido (Classe Order) usando as mesmas regras da classe User
+
+- Na classe Usuario criar a associação com a classe Order e instancia-la.
+- Acrescentar o método Get para a lista.
+
+- Voltar a classe Order
+- Fazer as anotations necessárias do JPA na classe Order para dizer que esta classe é uma tabela do banco de dados.
+- Implementar o relacionamento entre pedido (order) e cliente (user) para o JPA transformar isso em chaves estrangeiras no banco de dados.
+- Necessário da outro nome para a nossa tabela no banco de dados (anotation @Table) e fazer o mesmo na classe User
+
+- Na classe User vamos mapear o lado de um para muitos.
+
+- Nesta aula criamos a tabela de pedidos e implementamos os mapeamentos de associação.
