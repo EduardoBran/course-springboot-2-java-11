@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity //anotations do JPA para instruir como que ele vai converter os objetos para o modelo relacional.
 @Table(name = "tb_user")
 public class User implements Serializable {
@@ -25,6 +27,7 @@ public class User implements Serializable {
 	private String phone;
 	private String password;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "client") //"cliente" nome do atributo da clase Order
 	private List<Order> orders = new ArrayList<>(); //um cliente tem varios pedidos
 	

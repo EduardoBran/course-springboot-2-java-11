@@ -90,3 +90,19 @@ Aula 313 - Trabalhar com a classe de Pedido (Order), classe Instant (para repres
 - Na classe User vamos mapear o lado de um para muitos.
 
 - Nesta aula criamos a tabela de pedidos e implementamos os mapeamentos de associação.
+
+Aula 314 - Vamos falar da associação para muitos, lazy loading (carregamento tardio) e o JsonIgnore
+
+- Criar repository da entidade Order (Interface OrderRepository)
+- Criar o service da entidade Order  (Classe OrderService)
+- Criar o resource da entidade Order (Classe Order_Resource)
+
+- Na Classe TestConfig, vamos realizar o seed. Vamos mandar salvar alguns pedidos já na carga inicial do banco de dados.
+
+- Colocar a anotation JasonIgnore para que o Banco de Dados não fique chamando infinitamente a tabela.
+
+- Quando vc tem uma associação para muitos o JPA não carrega o os objetos do lado do muitos por padrão para não estourar a mamória do computador.
+
+- Acrescentar anotation JasonIgnore na classe User
+
+- Na classe Order, para garantir que o meu instant seja mostrado no Jason no formato de String do ISO 8601, colocar a @anotation @JsonFormat pra formatar o meu Json
