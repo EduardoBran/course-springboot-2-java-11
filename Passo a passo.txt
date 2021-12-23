@@ -112,3 +112,12 @@ Aula 315 - Vamos fazer um OrderStatus do tipo enumerado.
 - Criar o enum OrderStatus
 - Na instaciação a gente colocou o OrderStatus.PAID e assim por diante. Por padrão o java enumerao cada um dos tipos enumerados, se um programador simplesmente adicionar um ENUM no meio, ele quebra os valores banco de dados.
 - Por isso temos que atribuir um valor numérico para cada tipo enumerado.
+
+Aula 316 - Implementação da entidade Category usando as mesmas regras das Entidades anteriores
+
+- Para ela ser uma entidade do meu sistema gerenciada pelo JPA, precisa fazer os anotations do JPA.
+
+- Para acesar o banco de dados em relação as categorias, eu tenho que implementar a classe CategoryRepositore.
+- Na classe TestConfig fazer a injeção de dependencia do CategoryRepository e depois instanciar no banco algumas categorias.
+
+- Criar as classes CategoryResource e CategoryService
