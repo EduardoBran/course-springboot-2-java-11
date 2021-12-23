@@ -117,7 +117,24 @@ Aula 316 - Implementação da entidade Category usando as mesmas regras das Entida
 
 - Para ela ser uma entidade do meu sistema gerenciada pelo JPA, precisa fazer os anotations do JPA.
 
-- Para acesar o banco de dados em relação as categorias, eu tenho que implementar a classe CategoryRepositore.
+- Para acesar o banco de dados em relação as categorias, eu tenho que criar a classe CategoryRepositore.
 - Na classe TestConfig fazer a injeção de dependencia do CategoryRepository e depois instanciar no banco algumas categorias.
 
 - Criar as classes CategoryResource e CategoryService
+
+Aula 317 - Implementação da Entidade Produto
+
+- Criar a classe Product utilizando as regras de entidade.
+- Implementar as associações entre as classes Product e Category (dentro de Category eu vou ter um conjunto de Product e dentro de Product eu tenho um conjunto de Category)
+- Como são coleções, usaremos apenas o Get
+- De volta a classe Product, implementar o construtor padrão e depois o construtor com argumentos (retirar a coleção do construtor pois a mesma ja foi instanciada)
+- Agora realizar o mapeamento objeto relacional do JPA (colocar as anotations).
+
+- Criar a classe ProductRepository
+- Na classe TestConfig fazer a injeção de dependencia do ProductRepository e depois instanciar no banco alguns produtos.
+- Colocar a anotation @Transient de forma temporária
+
+
+- Criar as classes ProductResource e ProductService
+
+
