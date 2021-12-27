@@ -137,4 +137,15 @@ Aula 317 - Implementação da Entidade Produto
 
 - Criar as classes ProductResource e ProductService
 
+Aula 318 -  Associação muito para muitos com o JoinTable
 
+- Um mesmo produto pode ter mais de uma categoria, assim como uma categoria pode ter mais de 1 produto.
+
+- Vamos ter que mapear as classes Product e Category para que essa tabela de associação apareça lá no banco relacional.
+- Na classe Product, apagar o 'Transeunt' (foi usado de forma temporária) e colocar o anotation @ManyToMany e @JoinTable e seus atributos
+- Na classe Category colocar a referência para o mapeamento feito na classe Product 
+
+- Baseado no fluxograma do projeto, associar os produtos com as categorias
+- Na classe TestConfig, depois de instanciar as categorias, produtos e salvar, eu preciso dizer qual categoria de qual produto
+
+- Para evitar o loop infinito no Postman, na classe Category adicionar a anotation @JsonIgnore

@@ -9,14 +9,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "tb_product")
-public class Product implements Serializable {	
+public class Product implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -24,13 +26,16 @@ public class Product implements Serializable {
 	private String description;
 	private Double price;
 	private String imgUrl;
-	
-	@Transient
-	private Set<Category> categories = new HashSet<>(); //utilizando o Set para garantir que nao vou ter um produto com mais de uma ocorrência da mesma categoria
-	//estamos instanciando para garantir que a coleção não comece valendo nulo. Tem que começar vazia porém instanciada
-	//Usando o HashSet ao invés do Set porque o Set é uma interface , não pode ser instanciado. Por isso usamos uma classe correspondente a esta interface (HashSet)
-	
-	public Product() {		
+
+	@ManyToMany
+	@JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "category_id")) // "tb_product_category nome da tabela de associação no banco de dados, chaves estrangeiras que vão associar a tabela de produto com a tabela de categoria
+	private Set<Category> categories = new HashSet<>(); // utilizando o Set para garantir que nao vou ter um produto com mais de uma ocorrência da mesma categoria
+	// estamos instanciando para garantir que a coleção não comece valendo nulo. Tem
+	// que começar vazia porém instanciada
+	// Usando o HashSet ao invés do Set porque o Set é uma interface , não pode ser
+	// instanciado. Por isso usamos uma classe correspondente a esta interface(HashSet)
+
+	public Product() {
 	}
 
 	public Product(Long id, String name, String description, Double price, String imgUrl) {
@@ -101,5 +106,5 @@ public class Product implements Serializable {
 			return false;
 		Product other = (Product) obj;
 		return Objects.equals(id, other.id);
-	}	
+	}
 }
