@@ -149,3 +149,9 @@ Aula 318 -  Associação muito para muitos com o JoinTable
 - Na classe TestConfig, depois de instanciar as categorias, produtos e salvar, eu preciso dizer qual categoria de qual produto
 
 - Para evitar o loop infinito no Postman, na classe Category adicionar a anotation @JsonIgnore
+
+Aula 319 - Fazer o item de pedido (que terá uma associação com muito para muitos com atributos extras) - PARTE 1
+
+- Criar uma classe auxiliar OrderItemPK - esta classe tem uma referência para as duas classes (pedido e produto)
+
+- Criar a classe OrderItem
