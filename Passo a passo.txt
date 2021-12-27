@@ -155,3 +155,9 @@ Aula 319 - Fazer o item de pedido (que terá uma associação com muito para muitos
 - Criar uma classe auxiliar OrderItemPK - esta classe tem uma referência para as duas classes (pedido e produto)
 
 - Criar a classe OrderItem
+
+- Aula 320 - Fazer o item de pedido (que terá uma associação com muito para muitos com atributos extras) - PARTE 2
+
+- Na classe Order, fazer a associação OneToMany .
+- Criar classe OrderItemRepository
+- Na classe OrderItem colocar um @JsonIgnore em cima do método getOrder()
