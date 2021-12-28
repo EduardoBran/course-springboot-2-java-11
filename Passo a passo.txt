@@ -158,6 +158,16 @@ Aula 319 - Fazer o item de pedido (que terá uma associação com muito para muitos
 
 - Aula 320 - Fazer o item de pedido (que terá uma associação com muito para muitos com atributos extras) - PARTE 2
 
-- Na classe Order, fazer a associação OneToMany .
+- Na classe Order, fazer a associação OneToMany com a classe OrderItem
 - Criar classe OrderItemRepository
 - Na classe OrderItem colocar um @JsonIgnore em cima do método getOrder()
+- Instanciar os itens de pedido na classe TestConfig
+
+- Aula 321 - Vamos fazer o Product-OrderItem associação muito para muitos (associação do produto com item de pedido)
+
+- O Product tem uma associação direta com OrderItem que por sua vez tem associação com o Order.
+- Como faremos para que a partir de um produto pegar uma lista de Orders associado a ele? Vamos ter que varrer a coleção de OrderItem associado a ele e para cada OrderItem vamos associar o objeto Order associado a OrderItem.
+
+- Na classe Product fazer a associação (inversa) com OrderItem
+- Na classe Product criar o método getOrders() para que ele responda uma lista de Order (não OrderItem)
+- Colocar a anotation @JsonIgnore sobre getOrders()
