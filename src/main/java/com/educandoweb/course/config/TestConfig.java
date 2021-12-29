@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.educandoweb.course.entities.Category;
 import com.educandoweb.course.entities.Order;
 import com.educandoweb.course.entities.OrderItem;
+import com.educandoweb.course.entities.Payment;
 import com.educandoweb.course.entities.Product;
 import com.educandoweb.course.entities.User;
 import com.educandoweb.course.entities.enums.OrderStatus;
@@ -83,5 +84,11 @@ public class TestConfig implements CommandLineRunner{ //Command necessário para
 		OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+	
+		Payment pay1 = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1); //associei meu pedido 1 com o pagamento pay1
+		o1.setPayment(pay1); //feito isso, mando salvar novamente o pedido (p1) e assim o JPA trata de salvar este pedido
+		
+		orderRepository.save(o1); //salva no banco de dados
+		
 	}	
 }

@@ -166,8 +166,22 @@ Aula 319 - Fazer o item de pedido (que terá uma associação com muito para muitos
 - Aula 321 - Vamos fazer o Product-OrderItem associação muito para muitos (associação do produto com item de pedido)
 
 - O Product tem uma associação direta com OrderItem que por sua vez tem associação com o Order.
-- Como faremos para que a partir de um produto pegar uma lista de Orders associado a ele? Vamos ter que varrer a coleção de OrderItem associado a ele e para cada OrderItem vamos associar o objeto Order associado a OrderItem.
+- Como faremos para que a partir de um Product pegar uma lista de Orders associado a ele? Vamos ter que varrer a coleção de OrderItem associado a ele e para cada OrderItem vamos associar o objeto Order associado a OrderItem.
 
 - Na classe Product fazer a associação (inversa) com OrderItem
-- Na classe Product criar o método getOrders() para que ele responda uma lista de Order (não OrderItem)
-- Colocar a anotation @JsonIgnore sobre getOrders()
+- Na classe Product criar o método getOrders() para que ele responda uma lista de Order (e não OrderItem)
+- Na classe Product colocar a anotation @JsonIgnore sobre getOrders()
+
+- Aula 322 - Fazer a entidade Pagamento e a associação um para um
+
+- O Pagamento está associado com pedido.
+- Um pedido de 0 ou 1 pagamento. E o pagamento por sua vez ele necessariamente tem 1 pedido.
+
+- Criar a classe entidade Payment e fazer o check list necessario (atributos, associações, get and setters, constructors, hashcode e serializible)
+- Fazer as anotations para o mapeamento do JPA
+
+- Na classe Order informar que um pedido de tem um pagamento também e incluir os getters and setters.
+- Fazer as anotations para o mapeamento do JPA
+
+- Na classe TestConfig inserir um pagamento. No pedidod Order o1 já ocorreu um pagamento ("OrderStatus.PAID"), então vamos colocar um pagamento para ele.
+- Para colocar o pagamento precisa coloca objeto do tipo Paymento pay1
