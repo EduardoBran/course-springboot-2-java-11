@@ -156,14 +156,14 @@ Aula 319 - Fazer o item de pedido (que terá uma associação com muito para muitos
 
 - Criar a classe OrderItem
 
-- Aula 320 - Fazer o item de pedido (que terá uma associação com muito para muitos com atributos extras) - PARTE 2
+Aula 320 - Fazer o item de pedido (que terá uma associação com muito para muitos com atributos extras) - PARTE 2
 
 - Na classe Order, fazer a associação OneToMany com a classe OrderItem
 - Criar classe OrderItemRepository
 - Na classe OrderItem colocar um @JsonIgnore em cima do método getOrder()
 - Instanciar os itens de pedido na classe TestConfig
 
-- Aula 321 - Vamos fazer o Product-OrderItem associação muito para muitos (associação do produto com item de pedido)
+Aula 321 - Vamos fazer o Product-OrderItem associação muito para muitos (associação do produto com item de pedido)
 
 - O Product tem uma associação direta com OrderItem que por sua vez tem associação com o Order.
 - Como faremos para que a partir de um Product pegar uma lista de Orders associado a ele? Vamos ter que varrer a coleção de OrderItem associado a ele e para cada OrderItem vamos associar o objeto Order associado a OrderItem.
@@ -172,16 +172,24 @@ Aula 319 - Fazer o item de pedido (que terá uma associação com muito para muitos
 - Na classe Product criar o método getOrders() para que ele responda uma lista de Order (e não OrderItem)
 - Na classe Product colocar a anotation @JsonIgnore sobre getOrders()
 
-- Aula 322 - Fazer a entidade Pagamento e a associação um para um
+Aula 322 - Fazer a entidade Pagamento e a associação um para um
 
 - O Pagamento está associado com pedido.
 - Um pedido de 0 ou 1 pagamento. E o pagamento por sua vez ele necessariamente tem 1 pedido.
 
 - Criar a classe entidade Payment e fazer o check list necessario (atributos, associações, get and setters, constructors, hashcode e serializible)
 - Fazer as anotations para o mapeamento do JPA
+- Colocar o JsonIgnore sobre o atributo pedido(order)
 
 - Na classe Order informar que um pedido de tem um pagamento também e incluir os getters and setters.
 - Fazer as anotations para o mapeamento do JPA
 
 - Na classe TestConfig inserir um pagamento. No pedidod Order o1 já ocorreu um pagamento ("OrderStatus.PAID"), então vamos colocar um pagamento para ele.
 - Para colocar o pagamento precisa coloca objeto do tipo Paymento pay1
+
+
+Aula 323 - Para fechar a implementação básica do modelo de dominio, faremos os métodos Subtotal() e Total()
+
+- Na classe OrderItem, criar a função getSubtotal()
+
+- Na classe Order(pedido) criar a função Total()
