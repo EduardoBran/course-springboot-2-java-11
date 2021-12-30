@@ -103,7 +103,7 @@ Aula 314 - Vamos falar da associação para muitos, lazy loading (carregamento tar
 
 - Quando vc tem uma associação para muitos o JPA não carrega o os objetos do lado do muitos por padrão para não estourar a mamória do computador.
 
-- Acrescentar anotation JasonIgnore na classe User
+- Acrescentar anotation JasonIgnore sob List<Order> na classe User
 
 - Na classe Order, para garantir que o meu instant seja mostrado no Jason no formato de String do ISO 8601, colocar a @anotation @JsonFormat pra formatar o meu Json
 
@@ -193,3 +193,11 @@ Aula 323 - Para fechar a implementação básica do modelo de dominio, faremos os m
 - Na classe OrderItem, criar a função getSubtotal()
 
 - Na classe Order(pedido) criar a função Total()
+
+Aula 324 - Inserção de Usuário
+
+- Na classe UserService, criar uma operação insert() para salvar no Banco de Dados os dados de um usuário
+
+- Na classe UserResource fazer o endpoint para inserir criando o método ResponseEntity<User> insert(@RequestBody User obj).
+
+- Ir no postman , trocar o get para 'post' , ir na aba body e colar os dados do usuario. 
