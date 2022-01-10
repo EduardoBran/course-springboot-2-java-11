@@ -209,3 +209,9 @@ Aula 325 - Deletar um usuário
 - Na classe UserResource, incluir o endpoint para deletar 
 
 - Ir no postman , trocar o método 'delete' .
+
+Aula 326 - Atualização de Usuário
+
+- Na classe UserService, criar a função para atualizar um usuário.
+
+- Na clsse UserResource, incluir o end point para atualizar
