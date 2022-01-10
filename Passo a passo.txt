@@ -200,4 +200,12 @@ Aula 324 - Inserção de Usuário
 
 - Na classe UserResource fazer o endpoint para inserir criando o método ResponseEntity<User> insert(@RequestBody User obj).
 
-- Ir no postman , trocar o get para 'post' , ir na aba body e colar os dados do usuario. 
+- Ir no postman , trocar o get para 'post' , ir na aba body e colar os dados do usuario.
+
+Aula 325 - Deletar um usuário
+
+- Na classe UserService, fazer a deleção do usuário.
+
+- Na classe UserResource, incluir o endpoint para deletar 
+
+- Ir no postman , trocar o método 'delete' .
