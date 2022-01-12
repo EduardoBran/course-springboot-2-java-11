@@ -215,3 +215,16 @@ Aula 326 - Atualização de Usuário
 - Na classe UserService, criar a função para atualizar um usuário.
 
 - Na clsse UserResource, incluir o end point para atualizar
+
+Aula 326 - Tratamento de Exceções
+
+- Começar tratado exceção do findById
+- Se pesquisar por um usuario que nao existe, ele retorna o erro 500 e o certo é retornar o erro 404.
+
+- Criar a classe ResourceNotFoundException (que será a exceção personalizada nossa da nossa camada de serviço). Criar um construtor contendo a mensagem personalizada dizendo que nao encontrou o Id especificado.
+
+- Criar a classe StandardError. (quando a gente faz uma requisição e dar um erro, por padrão o spring retorna o objeto de erro com alguns dados. Vamos personalizar esses dados). Criar os atributos, construtores e get and setter (nao precisa hashcode pois não vamos comparar um erro ao outro).
+
+- Criar a classe ResourceExceptionHandler (nesta classe vamos dar o tratamento manual para os nossos erros)
+
+- Atualizar a classe UserService (método findById)
