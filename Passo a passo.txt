@@ -216,7 +216,7 @@ Aula 326 - Atualização de Usuário
 
 - Na clsse UserResource, incluir o end point para atualizar
 
-Aula 326 - Tratamento de Exceções
+Aula 326 - Tratamento de Exceção - findById
 
 - Começar tratado exceção do findById
 - Se pesquisar por um usuario que nao existe, ele retorna o erro 500 e o certo é retornar o erro 404.
@@ -228,3 +228,12 @@ Aula 326 - Tratamento de Exceções
 - Criar a classe ResourceExceptionHandler (nesta classe vamos dar o tratamento manual para os nossos erros)
 
 - Atualizar a classe UserService (método findById)
+
+Aula 327 - Tratamento de exceção - delete
+
+- Em UserService, no método de delete colocar um try.
+
+- Criar outro tipo de exceção personalizada DatabaseException
+
+- Na classe ResourceExceptionHandler , criar um método para a DatabaseException
+
